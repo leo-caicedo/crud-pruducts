@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  #postgres:
+    #image: postgres:13
+    #environment:
+      #- POSTGRES_DB=my_store
+      #- POSTGRES_USER=leo
+      #- POSTGRES_PASSWORD=adminleo
+    #ports:
+      #- 5432:5432
+    #volumes:
+      #- ./postgres_data:/var/lib/postgresql/data
+
+  mysql:
+    image: mysql:5
+    environment:
+      - MYSQL_DATABASE=tiend_app
+      - MYSQL_USER=leo
+      - MYSQL_PASSWORD=adminleo
+      - MYSQL_ROOT_PASSWORD=adminleo
+      - MYSQL_PORT=3306
+    ports:
+      - 3306:3306
+    #volumes:
+      #- ./mysql_data:/var/lib/mysql
